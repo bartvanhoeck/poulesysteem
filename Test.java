@@ -22,7 +22,7 @@ public class Test{
         Toernooi toernooi = new Toernooi("UEFA");
         toernooi.addPoule("A", "TEST", "PSV", "AZ", "NEC");
         toernooi.addPoule("B", "Besiktas", "Galatasaray", "Fenerbahce", "Trabzonspor");
-        toernooi.addPoule("C", "Manchester United", "Arsenal", "Chelsea", "Liverpool");
+        toernooi.addPoule("C", "Manchester United", "Arsenal", "Chelsea", "Poolliver");
         toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
         System.out.println(toernooi.getAlleTeams());
     }
