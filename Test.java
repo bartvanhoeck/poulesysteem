@@ -14,7 +14,7 @@ public class Test{
         toernooi.addPoule("A", "Ajax", "PSV", "AZ", "NEC");
         toernooi.addPoule("B", "Besiktas", "Galatasaray", "Fenerbahce", "Trabzonspor");
         toernooi.addPoule("C", "Manchester United", "Arsenal", "Chelsea", "Liverpool");
-        toernooi.addPoule("D", "Barca", "Real Madrid", "Valencia", "Atletico Madrid");
+        toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
         System.out.println(toernooi.getPoule(letter).toString());
     }
     
