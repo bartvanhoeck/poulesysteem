@@ -30,30 +30,19 @@ public class Poulegenerator{
     
     public int[] deelPoulesIn(int aantalTeams){ //aantalTeams mag egen 5 zijn
         int[] indeling = null;
-        switch(aantalTeams%4){
-            
-            case 0: indeling = new int[aantalTeams/4]; //poules van 4
-                    Arrays.fill(indeling, 4); 
-                    break; 
-            case 1: indeling = new int[aantalTeams/4+1]; //3 poules van 3, de rest van 4
-                    Arrays.fill(indeling, 0, 3, 3);
-                    Arrays.fill(indeling, 3, indeling.length, 4);
-                    break;
-            case 2: indeling = new int[aantalTeams/4+1]; //2 poules van 3, de rest van 4
-                    Arrays.fill(indeling, 0, 2, 3);
-                    Arrays.fill(indeling, 2, indeling.length, 4);
-                    break;
-            case 3: indeling = new int[aantalTeams/4+1]; //1 poules van 3, de rest van 4
-                    Arrays.fill(indeling, 0, 1, 3);
-                    Arrays.fill(indeling, 1, indeling.length, 4);
-                    break;
+        if(aantalTeams%4 == 0){
+            indeling = new int[aantalTeams/4];
+        } else{
+            indeling = new int[aantalTeams/4+1];
         }
+        Arrays.fill(indeling, 4); 
+        Arrays.fill(indeling, indeling.length-(4-aantalTeams%4), indeling.length, 3);
         return indeling;
     }
             
     
     private String genereerPouleLetter(int index){
-        switch (index){
+/*        switch (index){
             case 1: return "A";
             case 2: return "B";
             case 3: return "C";
@@ -65,7 +54,8 @@ public class Poulegenerator{
             case 9: return "I";
             case 10: return "J";
         }
-        return null;
+*/
+        return Character.toString((char)(64+index));
     }
             
     private void leesTeamsUitBestand(String textbestand) {
