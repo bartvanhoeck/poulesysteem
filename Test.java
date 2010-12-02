@@ -26,5 +26,12 @@ public class Test{
         toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
         System.out.println(toernooi.getAlleTeams());
     }
+    
+    public static void genereerPoules(){
+        Toernooi toernooi = new Toernooi("UEFA");
+        Poulegenerator generator = new Poulegenerator(toernooi);
+        generator.genereerPoules("teams.txt");
+        System.out.println(toernooi.toString());
+    }
 
 }
