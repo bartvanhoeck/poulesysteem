@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 import java.io.*;
 
 public class Poulegenerator{
@@ -28,6 +28,30 @@ public class Poulegenerator{
         }
     }
     
+    public int[] deelPoulesIn(int aantalTeams){ //aantalTeams mag egen 5 zijn
+        int[] indeling = null;
+        switch(aantalTeams%4){
+            
+            case 0: indeling = new int[aantalTeams/4]; //poules van 4
+                    Arrays.fill(indeling, 4); 
+                    break; 
+            case 1: indeling = new int[aantalTeams/4+1]; //3 poules van 3, de rest van 4
+                    Arrays.fill(indeling, 0, 3, 3);
+                    Arrays.fill(indeling, 3, indeling.length, 4);
+                    break;
+            case 2: indeling = new int[aantalTeams/4+1]; //2 poules van 3, de rest van 4
+                    Arrays.fill(indeling, 0, 2, 3);
+                    Arrays.fill(indeling, 2, indeling.length, 4);
+                    break;
+            case 3: indeling = new int[aantalTeams/4+1]; //1 poules van 3, de rest van 4
+                    Arrays.fill(indeling, 0, 1, 3);
+                    Arrays.fill(indeling, 1, indeling.length, 4);
+                    break;
+        }
+        return indeling;
+    }
+            
+    
     private String genereerPouleLetter(int index){
         switch (index){
             case 1: return "A";
@@ -44,9 +68,6 @@ public class Poulegenerator{
         return null;
     }
             
-            
-            
-    
     private void leesTeamsUitBestand(String textbestand) {
 		try {
 			BufferedReader bestand = new BufferedReader(new FileReader(textbestand));
