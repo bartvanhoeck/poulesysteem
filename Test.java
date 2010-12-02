@@ -27,6 +27,15 @@ public class Test{
         System.out.println(toernooi.getAlleTeams());
     }
     
+      public static void speelWedstrijd(String letter){
+        Toernooi toernooi = new Toernooi("UEFA");
+        toernooi.addPoule("A", "Ajax", "PSV", "AZ", "NEC");
+        toernooi.addPoule("B", "Besiktas", "Galatasaray", "Fenerbahce", "Trabzonspor");
+        toernooi.addPoule("C", "Manchester city", "Arsenal", "Chelsea", "Liverpool");
+        toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
+        System.out.println(toernooi.getPoule(letter).geefWedstrijden());
+    }
+    
     public static void genereerPoules(){
         Toernooi toernooi = new Toernooi("UEFA");
         Poulegenerator generator = new Poulegenerator(toernooi);
