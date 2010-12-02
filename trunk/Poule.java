@@ -50,22 +50,24 @@ public class Poule{
         wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(3)));
     }
     
+    public void setUitslag(int wedstrijdnummer, String score){
+        
+    }
+    
     public String geefWedstrijden() {
         String output = "Wedstrijden in poule "+ letter +":\n";
         for(Wedstrijd wedstrijd : wedstrijden){
             output += wedstrijd.toString() +"\n";
+            
         }
+        
         
         return output;    
     }
-        
-        
     
-       
-        
-        
-        
+          
 }
+
         
     
 

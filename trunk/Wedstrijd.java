@@ -2,18 +2,21 @@
 public class Wedstrijd
 {
     // Attributen
-    private int uitslagUit = 0;
-    private int uitslagThuis = 0;
+    private int uitslagUit = -1;
+    private int uitslagThuis = -1;
     private Team uit;
     private Team thuis;
+    private boolean gespeeld = false;
     
     // Constructor
-    public Wedstrijd( Team uit, Team thuis ) {
+    public Wedstrijd( Team thuis, Team uit ) {
         this.uit = uit;
         this.thuis = thuis;
         this.uitslagUit = uitslagUit;
         this.uitslagThuis = uitslagThuis;
     }
+    
+    
     
     // Methoden
     public Team getUit() {
@@ -32,14 +35,21 @@ public class Wedstrijd
         return uitslagThuis;
     }
     
-    public void setUitslag( int uitslagUit, int uitslagThuis )
+    public void setUitslag( int uitslagThuis, int uitslagUit )
     {
         this.uitslagUit = uitslagUit;
         this.uitslagThuis = uitslagThuis;
     }
     
     public String toString() {
-        return uit + "-" + thuis + "," + uitslagUit + "-" + uitslagThuis; 
+        String output = uit + "-" + thuis ;
+        String score = ", " + uitslagThuis + "-" + uitslagUit;
+        if(gespeeld == true) {
+            return output + score; 
+        }
+        else{ 
+            return output;
+        }
     }
    
 }
