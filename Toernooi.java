@@ -21,6 +21,11 @@ public class Toernooi{
         poules = new ArrayList<Poule>();
     }
     
+    public String getNaam(){
+        return naam;
+        
+    }
+    
     /**
      * De methode <code>addPoule</code> voegt een Poule toe aan <code>ArrayList<Poule></code>
      * Een poule bestaat uit vier teams en een letter om hem aan te kunnen roepen.
