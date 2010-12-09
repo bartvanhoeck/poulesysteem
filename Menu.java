@@ -36,7 +36,7 @@ public class Menu{
 			addStopItem( "(FOUT!!! Er is nog geen stop item toegevoegd aan dit menu)" );
 		}
 
-		System.out.println( "\n\n\n"                             );
+		System.out.println( "\f"                            );
 		System.out.println( "==================================" );
 		System.out.printf ( "=  %-30s=\n", titel                 );
 		System.out.println( "==================================" );
