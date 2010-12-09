@@ -33,8 +33,10 @@ public class Test{
         toernooi.addPoule("B", "Besiktas", "Galatasaray", "Fenerbahce", "Trabzonspor");
         toernooi.addPoule("C", "Manchester city", "Arsenal", "Chelsea", "Liverpool");
         toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
+        toernooi.getPoule(letter).setUitslag(1, "2-1");
         System.out.println(toernooi.getPoule(letter).geefWedstrijden());
     }
+    
     
     public static void genereerPoules(){
         Toernooi toernooi = new Toernooi("UEFA");
