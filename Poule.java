@@ -42,16 +42,21 @@ public class Poule{
     }
     
     public void addWedstrijdVerloop() {
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(1)));
-        wedstrijden.add(new Wedstrijd(teams.get(2), teams.get(3)));
-        wedstrijden.add(new Wedstrijd(teams.get(1), teams.get(2)));
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(2)));
-        wedstrijden.add(new Wedstrijd(teams.get(3), teams.get(1)));
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(3)));
+        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(1), 1));
+        wedstrijden.add(new Wedstrijd(teams.get(2), teams.get(3), 2));
+        wedstrijden.add(new Wedstrijd(teams.get(1), teams.get(2), 3));
+        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(2), 4));
+        wedstrijden.add(new Wedstrijd(teams.get(3), teams.get(1), 5));
+        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(3), 6));
     }
     
-    public void setUitslag(int wedstrijdnummer, String score){
-        
+    public void setUitslag(int wedstrijdId, String score){
+        String thuis = score.substring(0, score.indexOf("-"));
+        for(Wedstrijd wedstrijd : wedstrijden){
+            if(wedstrijdId == wedstrijd.getId()){
+                wedstrijd.setUitslag(1,2);
+            }
+        }
     }
     
     public String geefWedstrijden() {
