@@ -5,29 +5,23 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Poulesysteem
-{
-	// instance variables - replace the example below with your own
-	private int x;
+public class Poulesysteem{
 
-	/**
-	 * Constructor for objects of class Poulesysteem
-	 */
-	public Poulesysteem()
-	{
-		// initialise instance variables
-		Math.random();
-	}
+    private Toernooi toernooi;
 
-	/**
-	 * An example of a method - replace this comment with your own
-	 * 
-	 * @param  y   a sample parameter for a method
-	 * @return     the sum of x and y 
-	 */
-	public int sampleMethod(int y)
-	{
-		// put your code here
-		return x + y;
-	}
+    /**
+     * Constructor for objects of class Poulesysteem
+     */
+    public Poulesysteem(){
+        
+    }
+    
+    public Toernooi getToernooi(){
+        return toernooi;
+    }
+    
+    public void nieuwToernooi(String toernooiNaam){
+        toernooi = new Toernooi(toernooiNaam);
+    }
+
 }
