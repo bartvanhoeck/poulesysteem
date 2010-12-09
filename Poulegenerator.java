@@ -30,6 +30,24 @@ public class Poulegenerator{
     
     public int[] deelPoulesIn(int aantalTeams){ //aantalTeams mag egen 5 zijn
         int[] indeling = null;
+/*        switch(aantalTeams%4){
+            case 0: indeling = new int[aantalTeams/4];
+                    Arrays.fill(indeling, 4);
+                    break;
+            case 1: indeling = new int[aantalTeams/4+1];
+                    Arrays.fill(indeling, 4);
+                    Arrays.fill(indeling, indeling.length-3, indeling.length, 3);
+                    break;
+            case 2: indeling = new int[aantalTeams/4+1];
+                    Arrays.fill(indeling, 4);
+                    Arrays.fill(indeling, indeling.length-2, indeling.length, 3);
+                    break;
+            case 3: indeling = new int[aantalTeams/4+1];
+                    Arrays.fill(indeling, 4);
+                    Arrays.fill(indeling, indeling.length-1, indeling.length, 3);
+                    break;
+        }
+*/        
         if(aantalTeams%4 == 0){
             indeling = new int[aantalTeams/4];
         } else{
