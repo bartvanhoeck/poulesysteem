@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Poule{
     
+
     // Attributen
     private ArrayList<Team> teams;
     private ArrayList<Wedstrijd> wedstrijden;
@@ -51,10 +52,12 @@ public class Poule{
     }
     
     public void setUitslag(int wedstrijdId, String score){
-        String thuis = score.substring(0, score.indexOf("-"));
+        score = score.trim();
+        int thuis = Integer.parseInt(score.substring(0, score.indexOf("-")).trim());
+        int uit = Integer.parseInt(score.substring(score.indexOf("-")+1, score.length()).trim());
         for(Wedstrijd wedstrijd : wedstrijden){
             if(wedstrijdId == wedstrijd.getId()){
-                wedstrijd.setUitslag(1,2);
+                wedstrijd.setUitslag(thuis, uit);
             }
         }
     }

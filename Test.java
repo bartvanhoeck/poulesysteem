@@ -1,3 +1,10 @@
+/**
+ * Test is een tijdelijke klasse die we gebruiken om alles te printen en zodanig te testen.
+ * Dit zal later worden vervangen door een text user interface
+ * @author Ein1B
+ * 
+ */
+
 public class Test{
 
     public static void printToernooi(){
@@ -33,7 +40,7 @@ public class Test{
         toernooi.addPoule("B", "Besiktas", "Galatasaray", "Fenerbahce", "Trabzonspor");
         toernooi.addPoule("C", "Manchester city", "Arsenal", "Chelsea", "Liverpool");
         toernooi.addPoule("D", "Barcelona", "Real Madrid", "Valencia", "Atletico Madrid");
-        toernooi.getPoule(letter).setUitslag(1, "2-1");
+        toernooi.getPoule(letter).setUitslag(1, " 6 - 30");
         System.out.println(toernooi.getPoule(letter).geefWedstrijden());
     }
     
