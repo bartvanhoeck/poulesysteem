@@ -15,7 +15,7 @@ public class Poule{
     private String letter;
     
     /**
-     * Hier word de ArrayList<Team> en ArrayList<Wedstrijd> geïnitialiseerd.
+     * Hier word de ArrayList<Team> en ArrayList<Wedstrijd> geinitialiseerd.
      * Vervolgens word er een verloop van wedstrijden aan toegevoegd. zie @see wedstrijdVerloop
      * Als laatste voegt hij hier de vier teams toe aan de arraylist Wedstrijd.
      */
