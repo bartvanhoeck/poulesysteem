@@ -38,6 +38,11 @@ public class Poule{
     public String getLetter(){
         return letter;
     }
+    
+    public ArrayList<Wedstrijd> getWedstrijdenInArrayList(){
+        return wedstrijden;
+    }
+    
     /**
      * Methode getAlleTeams() gaat met behulp van een for loop alle teams af en print iedere team die het vindt m.b.v de toString methode
      * Deze methode is aan te roepen in de TUI en in de test klasse

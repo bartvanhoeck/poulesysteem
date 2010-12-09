@@ -86,7 +86,7 @@ public class Wedstrijd
      * @return Bijv: Nederland - Engeland, 2-1
      */
     public String toString() {
-        String output = uit + "-" + thuis;
+        String output = uit + " - " + thuis;
         String score = ", " + uitslagThuis + "-" + uitslagUit;
         if(gespeeld) {
             return output + score; 
