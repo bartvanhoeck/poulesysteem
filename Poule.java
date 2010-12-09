@@ -1,5 +1,11 @@
 import java.util.ArrayList;
-
+/**
+ * De klasse <code>Poule</code> dient voor het aanmaken van de Poules
+ * Poule voegt vier bestaande Teams toe en sluit ze bijeen.
+ * Verder geeft hij iedere poule een letter ter identificatie.
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
 public class Poule{
     
 
@@ -8,6 +14,11 @@ public class Poule{
     private ArrayList<Wedstrijd> wedstrijden;
     private String letter;
     
+    /**
+     * Hier word de ArrayList<Team> en ArrayList<Wedstrijd> geïnitialiseerd.
+     * Vervolgens word er een verloop van wedstrijden aan toegevoegd. zie @see wedstrijdVerloop
+     * Als laatste voegt hij hier de vier teams toe aan de arraylist Wedstrijd.
+     */
     // Constructor
     public Poule(String letter, String team1, String team2, String team3, String team4){
         this.letter = letter;
@@ -21,10 +32,16 @@ public class Poule{
     }
     
     // Methoden
+    /**
+     * Methode getLetter() Levert de letter van de poule op
+     */
     public String getLetter(){
         return letter;
     }
-    
+    /**
+     * Methode getAlleTeams() gaat met behulp van een for loop alle teams af en print iedere team die het vindt m.b.v de toString methode
+     * Deze methode is aan te roepen in de TUI en in de test klasse
+     */
     public String getAlleTeams(){
         String output = "";
         for(Team team : teams){
@@ -33,6 +50,9 @@ public class Poule{
         return output;
     }
     
+    /**
+     * De toString methode print de poule met bijbehorende teams af
+     */
     public String toString(){
         String output = "Poule "+ letter +"\n";
         for(Team team : teams){
@@ -40,6 +60,11 @@ public class Poule{
         }
         
         return output;
+        
+        /**
+         * Dit is het wedstrijd verloop dat iedere poule krijgt.
+         * De volgorde waarin de wedstrijden worden gespeeld is bij iedere poule hetzelfde
+         */
     }
     
     public void addWedstrijdVerloop() {
@@ -51,6 +76,11 @@ public class Poule{
         wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(3), 6));
     }
     
+    /**
+     * Methode <code>setUitslag()</code> zorgt ervoor dat je de uitslag toe kunt voegen aan een wedstrijd.
+     * Dit zal na het toevoegen automatisch aan een wedstrijd worden geplakt, inclusief bij de output van die wedstrijd.
+     */
+    
     public void setUitslag(int wedstrijdId, String score){
         score = score.trim();
         int thuis = Integer.parseInt(score.substring(0, score.indexOf("-")).trim());
@@ -61,7 +91,9 @@ public class Poule{
             }
         }
     }
-    
+    /**
+     * Methode <code>geefWedstrijden()</code> print alle wedstrijden in de ArrayList<wedstrijd> af m.b.v de toString() methode
+     */
     public String geefWedstrijden() {
         String output = "Wedstrijden in poule "+ letter +":\n";
         for(Wedstrijd wedstrijd : wedstrijden){
