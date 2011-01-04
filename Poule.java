@@ -66,12 +66,12 @@ public class Poule{
         
         return output;
         
-        /**
-         * Dit is het wedstrijd verloop dat iedere poule krijgt.
-         * De volgorde waarin de wedstrijden worden gespeeld is bij iedere poule hetzelfde
-         */
+        
     }
-    
+    /**
+     * Dit is het wedstrijd verloop dat iedere poule krijgt.
+     * De volgorde waarin de wedstrijden worden gespeeld is bij iedere poule hetzelfde
+     */
     public void addWedstrijdVerloop() {
         wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(1), 1));
         wedstrijden.add(new Wedstrijd(teams.get(2), teams.get(3), 2));
