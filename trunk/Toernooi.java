@@ -9,8 +9,9 @@ import java.util.ArrayList;
 
 public class Toernooi{
 
-    private ArrayList<Poule> poules;
     private String naam;
+    private PouleFase poulefase;
+    private KnockoutFase knockoutfase;
     
     /**
      * De constructor <code>Toernooi</code> maakt een nieuwe instantie van toernooi aan, en maakt gebruik van de variabele naam.
@@ -18,50 +19,52 @@ public class Toernooi{
      */
     public Toernooi(String naam){
         this.naam = naam;
-        poules = new ArrayList<Poule>();
+        poulefase = new PouleFase();
     }
     
     public String getNaam(){
         return naam;
-        
-    }
-    
-    /**
-     * De methode <code>addPoule</code> voegt een Poule toe aan <code>ArrayList<Poule></code>
-     * Een poule bestaat uit vier teams en een letter om hem aan te kunnen roepen.
-     */
-    public void addPoule(String letter, String team1, String team2, String team3, String team4){
-        poules.add(new Poule(letter, team1, team2, team3, team4));
-    }
-    /**
-     * De <code>toString()</code> print alle poules af die zijn toegevoegd aan ArrayList<Poules>
-     * Dit zal hij netjes verticaal en onder elkaar plaatsen i.c.m de toString methode.
-     */
-    public String toString(){
-        String output = "Toernooi: "+ naam +"\n\n";
-        for(Poule poule : poules){
-            output += poule.toString() +"\n";
-        }
-        
-        return output;
     }
     
     public String getAlleTeams(){
-        String output = "Teams in "+ naam +": \n";
-        for(Poule poule : poules){
-            output += poule.getAlleTeams();
+        String output = "Teams:\n";
+        if(poulefase != null){
+            output = poulefase.getAlleTeams();
+//        } else if(knockoutfase != null){
+//            output = knockoutfase.getAlleTeams();
         }
         return output;
     }
     
     public Poule getPoule(String letter){
-        for(Poule poule : poules){
-            if(letter.equals(poule.getLetter())){
-                return poule;
-            }
-        }
-        return null;
+        return poulefase.getPoule(letter);
     }
+    
+    public void addPoule(String letter, String team1, String team2, String team3, String team4){
+        poulefase.addPoule(letter, team1, team2, team3, team4);
+    }
+        
+    
+    /**
+     * De <code>toString()</code> print alle poules af die zijn toegevoegd aan ArrayList<Poules>
+     * Dit zal hij netjes verticaal en onder elkaar plaatsen i.c.m de toString methode.
+     */
+    public String toString(){
+        String output = "Toernooi: "+ naam +"\n";
+        if (poulefase != null){
+            output += "Type: Poule \n";
+            output += "Aantal teams: "+ poulefase.getAantalTeams();
+//        } else if(knockoutfase != null){
+//            output += "Type: Knockout\n";
+//            output += "Aantal teams: "+ knockoutfase.getAantalTeams();
+        }
+        
+        return output;
+    }
+    
+    
+    
+    
     
     
 
