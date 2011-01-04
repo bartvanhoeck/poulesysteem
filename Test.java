@@ -1,4 +1,4 @@
-import Model.*;
+
 /**
  * Test is een tijdelijke klasse die we gebruiken om alles te printen en zodanig te testen.
  * Dit zal later worden vervangen door een text user interface

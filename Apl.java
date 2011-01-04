@@ -1,5 +1,3 @@
-import TUI.Hoofdmenu;
-import Model.Poulesysteem;
 
 public class Apl{
 
