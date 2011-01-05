@@ -72,10 +72,12 @@ public class Wedstrijd
      * Na het uitvoeren van deze methode veranderd de boolean "gespeeld" in true.
      * Dit omdat je na het setten van een uitslag kan aannemen dat de wedstrijd gespeeld is 
      */
-    public void setUitslag( int uitslagThuis, int uitslagUit )
-    {
-        this.uitslagUit = uitslagUit;
-        this.uitslagThuis = uitslagThuis;
+    public void setUitslag( String score ){
+        score = score.trim();
+        int thuis = Integer.parseInt(score.substring(0, score.indexOf("-")).trim());
+        int uit = Integer.parseInt(score.substring(score.indexOf("-")+1, score.length()).trim());
+        this.uitslagUit = uit;
+        this.uitslagThuis = thuis;
         gespeeld = true;
     }
     
