@@ -87,12 +87,9 @@ public class Poule{
      */
     
     public void setUitslag(int wedstrijdId, String score){
-        score = score.trim();
-        int thuis = Integer.parseInt(score.substring(0, score.indexOf("-")).trim());
-        int uit = Integer.parseInt(score.substring(score.indexOf("-")+1, score.length()).trim());
         for(Wedstrijd wedstrijd : wedstrijden){
             if(wedstrijdId == wedstrijd.getId()){
-                wedstrijd.setUitslag(thuis, uit);
+                wedstrijd.setUitslag(score);
             }
         }
     }
