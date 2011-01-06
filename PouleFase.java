@@ -39,7 +39,7 @@ public class PouleFase{
     
     public String getAlleTeams(){
         String output = "";
-        for(Poule poule : poules){
+        for(Poule poule : poules){            
             output += poule.getAlleTeams();
         }
         return output;

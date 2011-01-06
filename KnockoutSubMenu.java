@@ -4,6 +4,7 @@ public class KnockoutSubMenu
     private Menu menu;
     private Poulesysteem poulesysteem;
     private Toernooi toernooi;
+    private Knockout knockout;
     
     // Constructor
     public KnockoutSubMenu(Poulesysteem poulesysteem){
@@ -23,6 +24,7 @@ public class KnockoutSubMenu
 
     }
     
+    // Toon menu
      public void toon() {
         int keuze = -1;
         while ( keuze != 0 ) {
@@ -41,7 +43,7 @@ public class KnockoutSubMenu
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
     
-    // Case2 - Poulegenerator straks omzetten in een Knockout generator
+    // Case2
     private void leesTeamsIn(){
         System.out.println("Lezen...");
         new Knockoutgenerator(toernooi).genereerKnockoutrondes("teams.txt");
@@ -50,12 +52,14 @@ public class KnockoutSubMenu
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
     
-    // Case3 - AFMAKEN zodra Knockout klaar is 
+    // Case3
     private void bekijkWedstrijden() {
+        knockout.getWedstrijden();
+        TuiHelper.drukafDrukEnterEnWachtOpEnter();
          
     }
         
-    // Case4 - AFMAKEN zodra Knockout klaar is
+    // Case4 - Problemen met case 4
     private void speelWedstrijd() {
             
     }
