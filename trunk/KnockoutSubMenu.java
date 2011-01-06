@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class KnockoutSubMenu
 {
     // Attributen
@@ -5,6 +7,9 @@ public class KnockoutSubMenu
     private Poulesysteem poulesysteem;
     private Toernooi toernooi;
     private Knockout knockout;
+    private ArrayList<Wedstrijd> wedstrijden;
+    private String opslagData;
+    
     
     // Constructor
     public KnockoutSubMenu(Poulesysteem poulesysteem){
@@ -59,15 +64,13 @@ public class KnockoutSubMenu
          
     }
         
-    // Case4 - Problemen met case 4
-    private void speelWedstrijd() {
-            
-    }
-    
-    
+    // Case4 - Methode uit Knockout gehaald en hier neer gezet (Peter controleer ff)
+        public void speelWedstrijd(int wedstrijdId, String score){
+        for(Wedstrijd wedstrijd : wedstrijden){
+            if(wedstrijdId == wedstrijd.getId()){
+                wedstrijd.setUitslag(score);
 
-    
-   
-    
-    
+            }
+        }
+    }   
 }
