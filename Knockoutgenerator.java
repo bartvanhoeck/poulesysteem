@@ -19,6 +19,7 @@ public class Knockoutgenerator {
     //Constructor
     public Knockoutgenerator(Toernooi toernooi){
         this.toernooi = toernooi;
+        this.knockout = toernooi.getKnockoutFase().getKnockout();
         teams = new ArrayList<String>();
     }
     

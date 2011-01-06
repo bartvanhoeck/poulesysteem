@@ -15,6 +15,7 @@ public class KnockoutSubMenu
     public KnockoutSubMenu(Poulesysteem poulesysteem){
         this.poulesysteem = poulesysteem;
         this.toernooi = poulesysteem.getToernooi();
+        this.knockout = toernooi.getKnockoutFase().getKnockout();
         maakMenu();
     }
     

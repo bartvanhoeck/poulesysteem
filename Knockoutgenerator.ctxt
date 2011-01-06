@@ -2,7 +2,7 @@
 comment0.params=toernooi
 comment0.target=Knockoutgenerator(Toernooi)
 comment1.params=teamlijst
-comment1.target=void\ genereerKnockoutrondes(String)
+comment1.target=void\ genereerKnockoutrondes(java.lang.String)
 comment2.params=textbestand
-comment2.target=void\ leesTeamsUitBestand(String)
+comment2.target=void\ leesTeamsUitBestand(java.lang.String)
 numComments=3

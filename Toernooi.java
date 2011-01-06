@@ -19,11 +19,22 @@ public class Toernooi{
      */
     public Toernooi(String naam){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         this.naam = naam;
+    }
+    
+    public void beginKnockoutFase(){
+        knockoutfase = new KnockoutFase();
+    }
+    
+    public void beginPouleFase(){
         poulefase = new PouleFase();
     }
     
     public String getNaam(){
         return naam;
+    }
+    
+    public KnockoutFase getKnockoutFase(){
+        return knockoutfase;
     }
     
     public String getAlleTeams(){
