@@ -32,6 +32,7 @@ public class ToernooiSubMenu{
     
     // Knockout
     private void nieuwKnockoutToernooi(){
+        poulesysteem.getToernooi().beginKnockoutFase();
         new KnockoutSubMenu(poulesysteem).toon();
     }
 }
