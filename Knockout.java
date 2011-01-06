@@ -3,15 +3,13 @@ public class Knockout{
 
     // Attributen
     private ArrayList<Wedstrijd> wedstrijden;
+
     
     
     // Constructor
     public Knockout(){
         wedstrijden = new ArrayList <Wedstrijd>();
-    }
-    
-    public Knockout(ArrayList<Team> teams){
-        
+
     }
     
     // Methoden

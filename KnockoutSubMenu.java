@@ -44,7 +44,7 @@ public class KnockoutSubMenu
     // Case2 - Poulegenerator straks omzetten in een Knockout generator
     private void leesTeamsIn(){
         System.out.println("Lezen...");
-        new Poulegenerator(toernooi).genereerPoules("teams.txt");
+        new Knockoutgenerator(toernooi).genereerKnockoutrondes("teams.txt");
         TuiHelper.wacht(3000);
         System.out.println("Teams ingelezen.");
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
