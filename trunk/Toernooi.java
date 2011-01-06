@@ -17,7 +17,7 @@ public class Toernooi{
      * De constructor <code>Toernooi</code> maakt een nieuwe instantie van toernooi aan, en maakt gebruik van de variabele naam.
      * Verder maakt hij gebruik van de ArrayList Poule. Hier haalt hij alle teams die de constructor nodig heeft vandaan.
      */
-    public Toernooi(String naam){
+    public Toernooi(String naam){                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         this.naam = naam;
         poulefase = new PouleFase();
     }

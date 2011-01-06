@@ -102,8 +102,7 @@ public class Poule{
             output += wedstrijd.toString() +"\n";
             
         }
-        
-        
+            
         return output;    
     }
     
