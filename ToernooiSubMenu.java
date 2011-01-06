@@ -20,12 +20,18 @@ public class ToernooiSubMenu{
         keuze = menu.getMenukeuze();
             
         switch ( keuze ) {
-            case 1: nieuwToernooi();   break;
-            case 2: break;
+            case 1: nieuwPouleToernooi();   break;
+            case 2: nieuwKnockoutToernooi(); break;
         }
     }
     
-    private void nieuwToernooi(){
+    // Poule
+    private void nieuwPouleToernooi(){
         new PouleSubMenu(poulesysteem).toon();
+    }
+    
+    // Knockout
+    private void nieuwKnockoutToernooi(){
+        new KnockoutSubMenu(poulesysteem).toon();
     }
 }
