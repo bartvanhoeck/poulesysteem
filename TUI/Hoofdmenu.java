@@ -1,3 +1,5 @@
+package TUI;
+
 
 public class Hoofdmenu{
     private Menu menu;

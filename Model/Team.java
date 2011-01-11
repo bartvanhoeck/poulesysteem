@@ -1,3 +1,5 @@
+package Model;
+
 /**
  * De klasse <code>Team</code> dient voor het aanmaken van de teams in ons poulesysteem.
  * De constructor <code>Team</code> initialiseert de variabele naam.
@@ -6,7 +8,9 @@
  * 
  */
 
-public class Team{
+import java.io.*;
+
+public class Team implements Serializable{
 
     private String naam;
     

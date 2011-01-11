@@ -1,3 +1,5 @@
+package Model;
+
 
 /**
  * De klasse <code>Poulesysteem</code>
@@ -7,7 +9,7 @@
  * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
  * 
  */
-public class Poulesysteem{
+public class Poulesysteem {
 
     private Toernooi toernooi;
 

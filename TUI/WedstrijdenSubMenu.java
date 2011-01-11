@@ -1,3 +1,5 @@
+package TUI;
+
 import java.util.ArrayList;
 public class WedstrijdenSubMenu{
 
