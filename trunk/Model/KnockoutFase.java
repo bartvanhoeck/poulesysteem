@@ -1,3 +1,5 @@
+package Model;
+
 
 /**
  * Write a description of class KnockoutFase here.
