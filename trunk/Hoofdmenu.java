@@ -1,6 +1,3 @@
-package TUI;
-import trunk.model.*;
-
 public class Hoofdmenu{
     private Menu menu;
     private Poulesysteem poulesysteem;

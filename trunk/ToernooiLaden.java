@@ -1,4 +1,4 @@
-package Model;
+ 
 
 
 /**
@@ -11,7 +11,7 @@ public class ToernooiLaden
 {
     public static void main( String[] args) {
         
-        Team team1 = new Team();
+        Team team1 = new Team("Ajax");
         
         String filenaam = "test.ser";
         try {

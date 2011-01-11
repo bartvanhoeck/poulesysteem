@@ -1,4 +1,4 @@
-package Model;
+ 
 
 /**
  * De klasse <code>Team</code> dient voor het aanmaken van de teams in ons poulesysteem.
