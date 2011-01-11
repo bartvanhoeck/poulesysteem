@@ -1,4 +1,4 @@
-package Model;
+ 
 
 /**
  * De klasse <code>Wedstrijd</code> dient voor het aanmaken van de variabelen van wedstrijd.
