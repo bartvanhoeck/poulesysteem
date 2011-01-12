@@ -24,6 +24,7 @@ public class KnockoutFase implements Serializable{
     
     public void nieuweRonde(){
         ArrayList<Team> teams = knockout.geefWinnaars();
+        this.nieuweKnockout();
         int wedstrijdId = 0;
         for(int i=0; i<teams.size(); i+=2){
             Team uit = teams.get(i);
