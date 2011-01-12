@@ -1,5 +1,15 @@
 import java.util.*;
 
+/**
+ * De klasse <code>KnockoutSubMenu</code>
+ * 
+ * In dit menu kom je terecht wanneer de gebruiker kiest voor een toernooi zonder poule
+ * In dit menu kun je alles regelen omtrent het toernooi
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
+
 public class KnockoutSubMenu
 {
     // Attributen

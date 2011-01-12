@@ -1,11 +1,15 @@
 import java.io.*;
 import java.util.*;
+
 /**
- * Write a description of class KnockoutFase here.
+ * De klasse <code>KnockoutFase</code>
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Hier kom je in terecht wanneer de gebruiker alle teams heeft ingeladen en wedstrijden wil gaan spelen.
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
  */
+
 public class KnockoutFase implements Serializable{
     private Knockout knockout;
     

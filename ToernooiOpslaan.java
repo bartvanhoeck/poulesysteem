@@ -3,10 +3,13 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Write a description of class ToernooiOpslaanEnLaden here.
+ * De klasse <code>ToernooiOpslaan</code>
  * 
- * @author Kenny Ekkelboom 
- * @version (a version number or a date)
+ * De klasse toernooiOpslaan maakt het mogelijk de uitslagen die zijn opgeschreven te bewaren.
+ * 
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
  */
 
 public class ToernooiOpslaan {

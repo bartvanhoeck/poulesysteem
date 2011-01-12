@@ -3,10 +3,12 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Write a description of class ToernooiLaden here.
+ * De klasse <code>ToernooiLaden</code>
  * 
- * @author Kenny Ekkelboom 
- * @version (a version number or a date)
+ * Deze klasse zorgt ervoor dat het mogelijk is om een bestaand toernooi met zijn resultaten op te slaan.
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
  */
 public class ToernooiLaden
 {
