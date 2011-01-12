@@ -66,7 +66,10 @@ public class Wedstrijd implements Serializable {
     public int uitslagThuis() {
         return uitslagThuis;
     }
-    
+     /**
+     * Deze methode kan worden aangeroepen in bijvoorbeeld een poule wedstrijd wanneer een wedstrijd is gespeeld.
+     * ZO kan worden bijgehouden welke wedstrijden nog gespeeld moeten worden.
+     */
     public boolean isGespeeld(){
         return gespeeld;
     }
