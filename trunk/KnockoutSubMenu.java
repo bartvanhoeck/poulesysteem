@@ -71,6 +71,7 @@ public class KnockoutSubMenu
      // Case4 
     private void speelWedstrijd(){
         new WedstrijdenSubMenu(knockout).toon();
+        knockout = toernooi.getKnockoutFase().getKnockout();
     }
     //Case5
     private void slaToernooiOp(){

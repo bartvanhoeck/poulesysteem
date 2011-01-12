@@ -1,32 +1,4 @@
-Manchester United
-FC Barcelona
-Chelsea
-Bayern München
-Liverpool
-Arsenal
-Internazionale
-Werder Bremen
-Sevilla
-AC Milan
-Besiktas
-Olympique Lyon
-Real Madrid
-AS Roma
-FC Porto
-Valencia
-Shakhtar Donetsk
-FC Twente Enschede
-Atlético Madrid
-CSKA Moscow
-Girondins Bordeaux
-Tottenham Hotspur
-Benfica
-Galatasaray
-Sporting CP Lisbon
-PSV Eindhoven
-Fiorentina
-Olympique Marseille
-Panathinaikos
-Villarreal
-Fenerbahçe
 Ajax
+Twente
+PSV
+AZ
