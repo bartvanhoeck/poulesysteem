@@ -51,7 +51,7 @@ public class Wedstrijd implements Serializable {
      * Levert het Team op dat thuis speelt
      */
     public Team getThuis() {
-        return uit;
+        return thuis;
     }
     
     /**
@@ -93,7 +93,7 @@ public class Wedstrijd implements Serializable {
      * @return Bijv: Nederland - Engeland, 2-1
      */
     public String toString() {
-        String output = uit + " - " + thuis;
+        String output = thuis + " - " + uit;
         String score = ", " + uitslagThuis + "-" + uitslagUit;
         if(gespeeld) {
             return output + score; 

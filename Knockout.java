@@ -31,7 +31,7 @@ public class Knockout implements Serializable{
             }
         }
         
-        if(this.allesGespeeld()){
+        if(this.allesGespeeld() && wedstrijden.size() > 1){
             knockoutfase.nieuweRonde();
         }
             

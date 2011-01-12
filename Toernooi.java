@@ -74,6 +74,9 @@ public class Toernooi implements Serializable{
         poulefase.addPoule(letter, team1, team2, team3, team4);
     }
     
+    public void addPoule(String letter, String team1, String team2, String team3){
+        poulefase.addPoule(letter, team1, team2, team3);
+    }
         
     
     /**

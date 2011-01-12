@@ -33,6 +33,16 @@ public class Poule implements Serializable{
         this.addWedstrijdVerloop();
     }
     
+    public Poule(String letter, String team1, String team2, String team3){
+        this.letter = letter;
+        teams = new ArrayList<Team>();
+        teams.add(new Team(team1));
+        teams.add(new Team(team2));
+        teams.add(new Team(team3));
+        wedstrijden = new ArrayList<Wedstrijd>();
+        this.addWedstrijdVerloop();
+    }
+    
     // Methoden
     /**
      * Methode getLetter() Levert de letter van de poule op
@@ -62,25 +72,25 @@ public class Poule implements Serializable{
      */
     public String toString(){
         String output = "Poule "+ letter +"\n";
+        
         for(Team team : teams){
             output += team.toString() +"\n";
         }
         
         return output;
-        
-        
     }
     /**
      * Dit is het wedstrijd verloop dat iedere poule krijgt.
      * De volgorde waarin de wedstrijden worden gespeeld is bij iedere poule hetzelfde
      */
     public void addWedstrijdVerloop() {
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(1), 1));
-        wedstrijden.add(new Wedstrijd(teams.get(2), teams.get(3), 2));
-        wedstrijden.add(new Wedstrijd(teams.get(1), teams.get(2), 3));
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(2), 4));
-        wedstrijden.add(new Wedstrijd(teams.get(3), teams.get(1), 5));
-        wedstrijden.add(new Wedstrijd(teams.get(0), teams.get(3), 6));
+        int id = 1;
+        for(int i=0; i<teams.size()-1; i++){
+            for(int j=i+1; j<teams.size(); j++){
+                wedstrijden.add(new Wedstrijd(teams.get(i), teams.get(j), id));
+                id++;
+            }
+        }
     }
     
     /**

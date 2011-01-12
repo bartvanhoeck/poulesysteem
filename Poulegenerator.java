@@ -27,18 +27,21 @@ public class Poulegenerator implements Serializable{
      */
     public void genereerPoules(String teamlijst){
         this.leesTeamsUitBestand(teamlijst);
-        int letterindex = 0;
-        while (teams.size()>0){
-            letterindex++;
+        int[] teamIndeling = deelPoulesIn(teams.size());
+       for(int i=0; i<teamIndeling.length; i++){
             ArrayList<String> poule = new ArrayList<String>();
-            while(poule.size()<4 && teams.size()>0){
+            while(poule.size()<teamIndeling[i]){
                 int index = (int)(Math.random()*teams.size());
                 poule.add(teams.get(index));
                 teams.remove(index);
             }
-            
-            toernooi.addPoule(this.genereerPouleLetter(letterindex),poule.get(0),poule.get(1),
-            poule.get(2),poule.get(3));
+            if(teamIndeling[i] == 4){
+                toernooi.addPoule(this.genereerPouleLetter(i),poule.get(0),poule.get(1),
+                poule.get(2),poule.get(3));
+            } else if(teamIndeling[i] == 3){
+                toernooi.addPoule(this.genereerPouleLetter(i),poule.get(0),poule.get(1),
+                poule.get(2));
+            }
             
         }
     }
@@ -52,25 +55,7 @@ public class Poulegenerator implements Serializable{
      * 
      */
     public int[] deelPoulesIn(int aantalTeams){ //aantalTeams mag egen 5 zijn
-        int[] indeling = null;
-/*        switch(aantalTeams%4){
-            case 0: indeling = new int[aantalTeams/4];
-                    Arrays.fill(indeling, 4);
-                    break;
-            case 1: indeling = new int[aantalTeams/4+1];
-                    Arrays.fill(indeling, 4);
-                    Arrays.fill(indeling, indeling.length-3, indeling.length, 3);
-                    break;
-            case 2: indeling = new int[aantalTeams/4+1];
-                    Arrays.fill(indeling, 4);
-                    Arrays.fill(indeling, indeling.length-2, indeling.length, 3);
-                    break;
-            case 3: indeling = new int[aantalTeams/4+1];
-                    Arrays.fill(indeling, 4);
-                    Arrays.fill(indeling, indeling.length-1, indeling.length, 3);
-                    break;
-        }
-*/        
+        int[] indeling = null;        
         if(aantalTeams%4 == 0){
             indeling = new int[aantalTeams/4];
         } else{
@@ -94,7 +79,7 @@ public class Poulegenerator implements Serializable{
      */
     private String genereerPouleLetter(int index){
 
-        return Character.toString((char)(64+index));
+        return Character.toString((char)(65+index));
     }
             
     /**
@@ -103,16 +88,16 @@ public class Poulegenerator implements Serializable{
      * De methode geeft een error wanneer hij een textbestand niet kan lezen.
      */
     private void leesTeamsUitBestand(String textbestand) {
-		try {
-			BufferedReader bestand = new BufferedReader(new FileReader(textbestand));
-			while(bestand.ready()) {
-				String team = bestand.readLine();
-				teams.add(team);
-			}
-		} catch (IOException e) {
-			System.out.println("Fout tijdens teams inlezen");
-		}
-	}
+        try {
+            BufferedReader bestand = new BufferedReader(new FileReader(textbestand));
+            while(bestand.ready()) {
+                String team = bestand.readLine();
+                teams.add(team);
+            }
+        } catch (IOException e) {
+            System.out.println("Fout tijdens teams inlezen");
+        }
+    }
     
     
 }

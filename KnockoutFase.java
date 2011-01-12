@@ -19,7 +19,6 @@ public class KnockoutFase implements Serializable{
     
     public Knockout getKnockout(){
         return knockout;
-        
     }
     
     public void nieuweRonde(){
@@ -27,10 +26,10 @@ public class KnockoutFase implements Serializable{
         this.nieuweKnockout();
         int wedstrijdId = 0;
         for(int i=0; i<teams.size(); i+=2){
-            Team uit = teams.get(i);
-            Team thuis = teams.get(i+1);
+            Team thuis = teams.get(i);
+            Team uit = teams.get(i+1);
             wedstrijdId++;
-            knockout.addWedstrijd(new Wedstrijd(uit, thuis, wedstrijdId));
+            knockout.addWedstrijd(new Wedstrijd(thuis, uit, wedstrijdId));
         }  
     }
 }
