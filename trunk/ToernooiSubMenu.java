@@ -1,3 +1,13 @@
+/**
+ * De klasse <code>ToernooiSubMenu</code>
+ * 
+ * Dit is het menu waar je in komt als de gebruiker kiest voor een nieuw toernooi.
+ * Je kunt kiezen tussen een toernooi met poules of een toernooi zonder poules (knockout)
+ * 
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
 
 public class ToernooiSubMenu{
     private Menu menu;

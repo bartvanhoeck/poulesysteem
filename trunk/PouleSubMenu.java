@@ -1,4 +1,12 @@
-
+/**
+ * De klasse <code>PouleSubMenu</code>
+ * 
+ * PouleSubMenu kom je in wanneer de gebruiker kiest voor een toernooi met poules.
+ * Dit menu laat je alles regelen wat betreft het toernooi.
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
 
 public class PouleSubMenu{
     private Menu menu;

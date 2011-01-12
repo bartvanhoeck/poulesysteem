@@ -1,4 +1,14 @@
 import java.util.ArrayList;
+
+/**
+ * De klasse <code>WedstrijdenSubMenu</code>
+ * 
+ * Dit menu komt tevoorschijn wanneer de gebruiker uitslagen aan wedstrijden wil toevoegen.
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
+
 public class WedstrijdenSubMenu{
 
     private Menu menu;
