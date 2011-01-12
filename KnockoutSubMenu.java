@@ -39,9 +39,8 @@ public class KnockoutSubMenu
             switch ( keuze ) {
                 case 1: bekijkTeams();       break; 
                 case 2: leesTeamsIn();       break;
-                case 3: bekijkWedstrijden(); break;
-                case 4: speelWedstrijd();    break;
-                case 5: slaToernooiOp();     break;
+                case 3: speelWedstrijd();    break;
+                case 4: slaToernooiOp();     break;
             }
         }
     }
@@ -52,7 +51,7 @@ public class KnockoutSubMenu
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
     
-    // Case2
+    // Case 2
     private void leesTeamsIn(){
         System.out.println("Lezen...");
         new Knockoutgenerator(toernooi).genereerKnockoutrondes("teams.txt");
@@ -61,19 +60,13 @@ public class KnockoutSubMenu
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
     
-    // Case3
-    private void bekijkWedstrijden() {
-        knockout.getWedstrijden();
-        TuiHelper.drukafDrukEnterEnWachtOpEnter();
-         
-    }
     
-     // Case4 
+     // Case3
     private void speelWedstrijd(){
         new WedstrijdenSubMenu(knockout).toon();
         knockout = toernooi.getKnockoutFase().getKnockout();
     }
-    //Case5
+    //Case 4
     private void slaToernooiOp(){
         System.out.println("Opslaan....");
         poulesysteem.saveToernooi();

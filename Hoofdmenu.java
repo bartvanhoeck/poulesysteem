@@ -1,3 +1,13 @@
+/**
+ * De klasse <code>Hoofdmenu</code>
+ * 
+ * Menu dient als het geraamte voor de rest van de menus.
+ * Hier staat beschreven hoe het menu is opgebouwd.
+ * Ieder menu in ons poulesysteem kan erven dan dit menu.
+ * 
+ * @author Kenny Ekkelboom, Peter Padberg, Tristan Weber
+ * 
+ */
 
 public class Hoofdmenu{
     private Menu menu;
