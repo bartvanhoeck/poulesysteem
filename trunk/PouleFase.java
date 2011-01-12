@@ -30,6 +30,10 @@ public class PouleFase implements Serializable {
         poules.add(new Poule(letter, team1, team2, team3, team4));
     }
     
+    public void addPoule(String letter, String team1, String team2, String team3){
+        poules.add(new Poule(letter, team1, team2, team3));
+    }
+    
      /**
       * de Methode <code>getAantalteams()</code> 
       */

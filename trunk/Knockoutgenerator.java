@@ -32,7 +32,7 @@ public class Knockoutgenerator{
             Team uit = new Team(teams.get(i));
             Team thuis = new Team(teams.get(i+1));
             wedstrijdId++;
-            knockout.addWedstrijd(new Wedstrijd(uit, thuis, wedstrijdId));
+            knockout.addWedstrijd(new Wedstrijd(thuis, uit, wedstrijdId));
         }      
     }
     

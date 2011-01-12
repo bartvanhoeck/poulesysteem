@@ -2,3 +2,6 @@ Ajax
 Twente
 PSV
 AZ
+Utrecht
+Graafschap
+Heracles
