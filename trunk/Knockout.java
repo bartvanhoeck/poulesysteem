@@ -47,6 +47,16 @@ public class Knockout implements Serializable{
         return wedstrijden;
     }
     
+    public String getAlleTeams(){
+        String output = "";
+        for(Wedstrijd wedstrijd : wedstrijden){
+            output += wedstrijd.getThuis().toString() +"\n";
+            output += wedstrijd.getUit().toString() +"\n";
+        }
+        
+        return output;
+    }
+    
     /**
      * De methode <code>speelWedstrijd()</code> laat de gebruiker voor een bepaalde wedstrijd een score zetten
      * Als er bij meer dan een wedstrijd een score is gezet begint er een nieuwe ronde voor de finale

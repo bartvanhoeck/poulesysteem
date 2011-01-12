@@ -62,7 +62,9 @@ public class Poulegenerator implements Serializable{
             indeling = new int[aantalTeams/4+1];
         }
         Arrays.fill(indeling, 4); 
-        Arrays.fill(indeling, indeling.length-(4-aantalTeams%4), indeling.length, 3);
+        if(aantalTeams%4!=0){
+            Arrays.fill(indeling, indeling.length-(4-aantalTeams%4), indeling.length, 3);
+        }
         return indeling;
     }
             

@@ -89,18 +89,24 @@ public class Toernooi implements Serializable{
         return knockoutfase;
     }
     
+    
+    
         /**
       * de Methode <code>getAlleTeams()</code> geeft een lijst weer met alle teams die momenteel zijn ingelezen in het programma.
       */
      
     public String getAlleTeams(){
         String output = "Teams:\n";
-        if(poulefase != null){
+        if(isPoulefase()){
             output = poulefase.getAlleTeams();
-//        } else if(knockoutfase != null){
-//            output = knockoutfase.getAlleTeams();
+        } else if(isKnockoutfase()){
+            output = knockoutfase.getAlleTeams();
         }
         return output;
+    }
+    
+    public String geefAlleWedstrijden(){
+        return poulefase.geefAlleWedstrijden();
     }
     
        /**

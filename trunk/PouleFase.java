@@ -47,6 +47,14 @@ public class PouleFase implements Serializable {
         return output;
     }
     
+    public String geefAlleWedstrijden(){
+        String output ="";
+        for(Poule poule : poules){
+            output += poule.geefWedstrijden();
+        }
+        return output;
+    }
+    
     
       /**
       * de Methode <code>getPoule()</code> maakt het mogelijk een poule letter in te vullen,

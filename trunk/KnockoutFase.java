@@ -25,6 +25,10 @@ public class KnockoutFase implements Serializable{
         return knockout;
     }
     
+    public String getAlleTeams(){
+        return knockout.getAlleTeams();
+    }
+    
     public void nieuweRonde(){
         ArrayList<Team> teams = knockout.geefWinnaars();
         this.nieuweKnockout();

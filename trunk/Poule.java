@@ -114,6 +114,7 @@ public class Poule implements Serializable{
             output += wedstrijd.toString() +"\n";
             
         }
+        output += "\n";
             
         return output;    
     }

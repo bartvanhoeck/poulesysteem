@@ -26,6 +26,20 @@ public class TuiHelper {
         return scan.nextLine();
     }
     
+    public static String stelVraagMetUitslagAntwoord( String vraag, String header ) {
+        String input = stelVraagMetTekstAntwoord(vraag, header);
+        
+        try{
+            Integer.parseInt(input.substring(0, input.indexOf("-")).trim());
+            Integer.parseInt(input.substring(input.indexOf("-")+1, input.length()).trim());
+        }
+        catch(Exception e){
+            System.err.println("Invoer '"+ input +"' is geen geldige uitslag.");
+            return stelVraagMetUitslagAntwoord(vraag, header);
+        }
+        return input;
+        
+    }
     public static String stelVraagMetPouleLetterAntwoord( String vraag) {
         System.out.println( vraag );
         
