@@ -16,6 +16,7 @@ public class PouleSubMenu{
     public PouleSubMenu(Poulesysteem poulesysteem){
         this.poulesysteem = poulesysteem;
         this.toernooi = poulesysteem.getToernooi();
+        this.leesTeamsIn();
         maakMenu();
     }
     
@@ -24,9 +25,8 @@ public class PouleSubMenu{
         menu.addItem( "Bekijk alle teams" );
         menu.addItem( "Bekijk de poules" );
         menu.addItem( "Bekijk een poule" );
-        menu.addItem( "Bekijk de wedstrijden in een poule" );
+        menu.addItem( "Bekijk alle wedstrijden" );
         menu.addItem( "Speel wedstrijd in een poule" );
-        menu.addItem( "Lees de teams in uit een bestand" );
         menu.addItem( "Sla toernooi op" );
         menu.addStopItem( "Toernooi afsluiten" );
     }
@@ -41,13 +41,13 @@ public class PouleSubMenu{
                 case 3: bekijkPoule();        break;
                 case 4: bekijkWedstrijden();  break;
                 case 5: speelWedstrijd();     break;
-                case 6: leesTeamsIn();        break;
-                case 7: slaToernooiOp();      break;
+                case 6: slaToernooiOp();      break;
             }
         }
     }
     
     private void bekijkTeams(){
+        System.out.print("\f");
         System.out.println(toernooi.getAlleTeams());
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
@@ -70,12 +70,8 @@ public class PouleSubMenu{
     }
     
     private void bekijkWedstrijden(){
-        String letter = TuiHelper.stelVraagMetPouleLetterAntwoord( "Welke poule" ).toUpperCase();
-        if(toernooi.getPoule(letter) != null){
-            System.out.println(toernooi.getPoule(letter).geefWedstrijden());
-        } else{
-            System.out.println("Poule "+ letter +" bestaat niet.");
-        }
+        System.out.print("\f");
+        System.out.println(toernooi.geefAlleWedstrijden());
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
     
@@ -90,7 +86,7 @@ public class PouleSubMenu{
     private void leesTeamsIn(){
         System.out.println("Lezen...");
         new Poulegenerator(toernooi).genereerPoules("teams.txt");
-        TuiHelper.wacht(3000);
+        TuiHelper.wacht(2000);
         System.out.println("Teams ingelezen.");
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }

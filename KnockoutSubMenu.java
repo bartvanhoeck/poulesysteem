@@ -26,6 +26,7 @@ public class KnockoutSubMenu
         this.poulesysteem = poulesysteem;
         this.toernooi = poulesysteem.getToernooi();
         this.knockout = toernooi.getKnockoutFase().getKnockout();
+        this.leesTeamsIn();
         maakMenu();
     }
     
@@ -33,8 +34,6 @@ public class KnockoutSubMenu
    private void maakMenu() {
        menu = new Menu (toernooi.getNaam(), "vul menukeuze in");
        menu.addItem( "Bekijk alle teams" );
-       menu.addItem( "Lees de teams in uit een bestand" );
-       menu.addItem( "Bekijk de wedstrijden" );
        menu.addItem( "Speel wedstrijd" );
        menu.addItem( "Sla toernooi op" );
        menu.addStopItem( "Toernooi afsluiten" );
@@ -47,10 +46,9 @@ public class KnockoutSubMenu
         while ( keuze != 0 ) {
             keuze = menu.getMenukeuze();
             switch ( keuze ) {
-                case 1: bekijkTeams();       break; 
-                case 2: leesTeamsIn();       break;
-                case 3: speelWedstrijd();    break;
-                case 4: slaToernooiOp();     break;
+                case 1: bekijkTeams();     break; 
+                case 2: speelWedstrijd();  break;
+                case 3: slaToernooiOp();   break;
             }
         }
     }
@@ -60,28 +58,27 @@ public class KnockoutSubMenu
         System.out.println(toernooi.getAlleTeams());
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
-    
-    // Case 2
-    private void leesTeamsIn(){
-        System.out.println("Lezen...");
-        new Knockoutgenerator(toernooi).genereerKnockoutrondes("teams.txt");
-        TuiHelper.wacht(3000);
-        System.out.println("Teams ingelezen.");
-        TuiHelper.drukafDrukEnterEnWachtOpEnter();
-    }
-    
-    
-     // Case3
+      
+     // Case2
     private void speelWedstrijd(){
         new WedstrijdenSubMenu(knockout).toon();
         knockout = toernooi.getKnockoutFase().getKnockout();
     }
-    //Case 4
+    //Case 3
     private void slaToernooiOp(){
         System.out.println("Opslaan....");
         poulesysteem.saveToernooi();
         TuiHelper.wacht(2000);
         System.out.println("Toernooi opgeslagen!");
+        TuiHelper.drukafDrukEnterEnWachtOpEnter();
+    }
+    
+    
+    private void leesTeamsIn(){
+        System.out.println("Lezen...");
+        new Knockoutgenerator(toernooi).genereerKnockoutrondes("teams.txt");
+        TuiHelper.wacht(3000);
+        System.out.println("Teams ingelezen.");
         TuiHelper.drukafDrukEnterEnWachtOpEnter();
     }
         

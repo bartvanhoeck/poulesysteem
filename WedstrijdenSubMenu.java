@@ -53,7 +53,7 @@ public class WedstrijdenSubMenu{
     }
     
     private void speelWedstrijd(int wedstrijdId){
-        String uitslag = TuiHelper.stelVraagMetTekstAntwoord("Wat is de uitslag", "Wedstrijd "+wedstrijdId);
+        String uitslag = TuiHelper.stelVraagMetUitslagAntwoord("Wat is de uitslag", "Wedstrijd "+wedstrijdId);
         if(poule != null){
             poule.setUitslag(wedstrijdId, uitslag);
         }
